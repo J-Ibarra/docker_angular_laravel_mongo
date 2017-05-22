@@ -9,17 +9,9 @@ services:
             - "8001:80"
         volumes:
             - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+            - ./node:/var/www/html/node
         volumes_from:
             - php
-            - node
-
-    node:
-        build:
-            context: ./node
-            dockerfile: Dockerfile
-        container_name: app-node
-        volumes:
-            - ./node:/var/www/html/node
 
     php:
         build:
