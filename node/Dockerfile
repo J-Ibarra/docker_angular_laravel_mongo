@@ -1,7 +1,7 @@
 FROM node:7-slim
 
+RUN npm install -g @angular/cli
+
 WORKDIR /var/www/html/node/angular
 
-EXPOSE 4200
-
-ENTRYPOINT ["npm", "start"]
+ENTRYPOINT ["ng", "build"]
