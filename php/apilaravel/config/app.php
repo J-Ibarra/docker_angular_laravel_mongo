@@ -181,6 +181,7 @@ return [
          * custom
          */
         Moloquent\MongodbServiceProvider::class,
+        Barryvdh\Cors\ServiceProvider::class,
 
     ],
 
