@@ -12,9 +12,6 @@ services:
         volumes_from:
             - php
             - node
-        links:
-            - php
-            - node
 
     node:
         build:
